@@ -58,7 +58,8 @@ Como este é um projeto estático, não é necessário instalar dependências ou
 │   └── style.css       # Estilos e responsividade
 ├── js/
 │   └── main.js         # Interações da página e modo escuro
-├── images/             # Imagens dos projetos, tecnologias e redes sociais
+├── assets/
+│   └── images/         # Imagens dos projetos, tecnologias e redes sociais
 └── README.md           # Documentação do projeto
 ```
 
