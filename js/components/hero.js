@@ -5,7 +5,7 @@ const tools = [
 ];
 
 export function renderHero() {
-  const icons = tools.map(([name, file]) => `<li class="li-tools"><img alt="${name}" src="assets/images/${file}" /></li>`).join("");
+  const icons = tools.map(([name, file]) => `<li class="li-tools"><img alt="${name}" src="assets/icons/${file}" /></li>`).join("");
   return `<section class="container-me" aria-labelledby="welcome-title">
     <div class="welcome-text-and-tools">
       <h1 id="welcome-title">Seja bem vindo!</h1>
