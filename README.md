@@ -53,14 +53,16 @@ Como este é um projeto estático, não é necessário instalar dependências ou
 
 ```text
 .
-├── index.html          # Página principal do portfólio
-├── css/
-│   └── style.css       # Estilos e responsividade
-├── js/
-│   └── main.js         # Interações da página e modo escuro
-├── assets/
-│   └── images/         # Imagens dos projetos, tecnologias e redes sociais
-└── README.md           # Documentação do projeto
+??? index.html
+??? css/
+?   ??? main.css                 # Entrada que importa todos os m?dulos CSS
+?   ??? components/              # Estilos por componente/?rea e responsividade
+??? js/
+?   ??? main.js                  # Monta a p?gina e inicializa intera??es
+?   ??? components/              # Fun??es que renderizam cada se??o
+?   ??? interactions/            # Tema, certificados e navega??o mobile
+??? assets/images/               # Imagens dos projetos, tecnologias e redes
+??? README.md
 ```
 
 ## Publicação no GitHub Pages

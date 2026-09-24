@@ -1,0 +1,111 @@
+.career-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 6vw;
+}
+
+.career-section > h1 {
+  width: auto;
+  text-align: left;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+
+#experience-title > h1::before {
+  content: "02 / ";
+}
+
+#education-title > h1::before {
+  content: "04 / ";
+}
+
+.career-section > h1::before {
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.career-grid-single {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.career-card {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.career-card-accent {
+  border-color: rgba(85, 230, 208, 0.45);
+  background: linear-gradient(145deg, rgba(85, 230, 208, 0.08), transparent 65%), var(--surface);
+}
+
+.career-kicker,
+.career-status {
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.career-card h2 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.career-card p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.career-tags span {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--cyan);
+  background: #0a0f15;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+.career-status {
+  margin-top: auto;
+}
+
+.career-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.career-link:hover {
+  color: var(--orange);
+}

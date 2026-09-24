@@ -1,31 +1,29 @@
-const botao = document.getElementsByClassName("theme-switch__checkbox")[0];
+import { renderHeader } from "./components/header.js";
+import { renderHero } from "./components/hero.js";
+import { renderAbout, renderExperience, renderEducation } from "./components/content.js";
+import { renderCertificates } from "./components/certificates.js";
+import { renderProjects, renderContact } from "./components/projects.js";
+import { renderFooter } from "./components/footer.js";
+import { initializeTheme } from "./interactions/theme.js";
+import { initializeCertificates } from "./interactions/certificates.js";
+import { initializeMobileNavigation } from "./interactions/navigation.js";
 
-const temaSalvo = localStorage.getItem("portfolio-theme");
+const app = document.querySelector("#app");
 
-if (temaSalvo === "light") {
-    document.body.classList.add("light");
-    botao.checked = true;
+if (app) {
+  app.innerHTML = [
+    renderHeader(),
+    renderHero(),
+    renderAbout(),
+    renderExperience(),
+    renderCertificates(),
+    renderEducation(),
+    renderProjects(),
+    renderContact(),
+    renderFooter()
+  ].join("");
+
+  initializeTheme();
+  initializeCertificates();
+  initializeMobileNavigation();
 }
-
-botao.onclick = () => {
-    const temaClaro = document.body.classList.toggle("light");
-    document.body.classList.toggle("dark", !temaClaro);
-    localStorage.setItem("portfolio-theme", temaClaro ? "light" : "dark");
-};
-
-const listaCertificados = document.querySelector(".certificate-list");
-const botaoCertificados = document.querySelector(".certificates-toggle");
-
-botaoCertificados.onclick = () => {
-    const listaExpandida = listaCertificados.classList.toggle("is-expanded");
-    botaoCertificados.setAttribute("aria-expanded", String(listaExpandida));
-    botaoCertificados.textContent = listaExpandida
-        ? "Ocultar certificados"
-        : "Ver mais certificados";
-};
-
-document.querySelectorAll(".mobile-nav nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-        link.closest(".mobile-nav").removeAttribute("open");
-    });
-});

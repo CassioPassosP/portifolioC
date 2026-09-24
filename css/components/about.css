@@ -1,0 +1,54 @@
+.about-me,
+.contact-me {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 6vw;
+}
+
+#about-me-title,
+#project-title,
+#contact-title {
+  width: auto;
+  text-align: left;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+
+#about-me-title::before,
+#project-title::before,
+#contact-title::before {
+  color: var(--orange);
+  content: "01 / ";
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+#about-me-title::before {
+  content: "01 / ";
+}
+
+.about-me-container-card {
+  margin-top: 2.5rem;
+}
+
+.about-me-card {
+  max-width: 880px;
+  padding: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+#about-me-text {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+#about-me-text a {
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+}

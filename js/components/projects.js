@@ -1,0 +1,12 @@
+export function renderProjects() {
+  const projects = [
+    ["https://github.com/CassioPassosP/MarioJump", "marioGame.png", "Mario Jump", "Jogo 2D inspirado no Super Mario, desenvolvido com HTML, CSS e JavaScript, onde o jogador deve desviar dos obstáculos e alcançar a maior pontuação.", ["HTML", "CSS", "JavaScript"]],
+    ["https://github.com/CassioPassosP/FinanceEs", "financeProject.png", "FinanceEs", "Sistema web de gestão financeira pessoal para controle de receitas, despesas, saldo e metas financeiras.", ["Java", "Spring Boot", "React", "JavaScript"]],
+    ["https://github.com/CassioPassosP/Projeto-React-Lista-Tarefas", "todoList.png", "Lista de Tarefas", "Aplicação web de gerenciamento de tarefas desenvolvida com React, permitindo adicionar e remover tarefas por meio de uma interface simples e intuitiva.", ["React"]]
+  ];
+  return `<section class="projects-list"><h1 id="project-title">Projetos</h1><div class="card-project-list">${projects.map(([url, image, title, description, tags]) => `<a href="${url}" target="_blank" rel="noreferrer"><div class="cardsImages"><img alt="${title}" src="assets/images/${image}" /><h2 class="title-card-projects">${title}</h2><p class="descricao-card-projects">${description}</p><div class="tags-project"><p>${tags.map(tag => `<span>${tag}</span>`).join("")}</p></div></div></a>`).join("")}</div></section>`;
+}
+
+export function renderContact() {
+  return `<section class="contact-me"><h1 id="contact-title">Contato</h1><div class="contact-me-container"><div class="contact-card"><p id="contact-me-text">Se você deseja entrar em contato comigo, seja para discutir oportunidades de trabalho, projetos colaborativos ou apenas para trocar ideias sobre tecnologia, sinta-se à vontade para me enviar uma mensagem. Estou sempre aberto a novas conexões e colaborações.</p><div class="socialMedia"><a href="https://www.linkedin.com/in/cassio-passos-pereira/" target="_blank" rel="noreferrer"><img alt="LinkedIn" class="SocialMediaImg" src="assets/images/linkedin.png" />LinkedIn</a><a href="https://github.com/CassioPassosP" target="_blank" rel="noreferrer"><img alt="GitHub" class="SocialMediaImg" src="assets/images/github-link.png" />GitHub</a><a href="https://www.instagram.com/sktcapb/" target="_blank" rel="noreferrer"><img alt="Instagram" class="SocialMediaImg" src="assets/images/instagram.png" />Instagram</a><a href="mailto:passoscassio29@gmail.com"><img alt="Email" class="SocialMediaImg" src="assets/images/gmail.png" />Email</a></div></div></div></section>`;
+}

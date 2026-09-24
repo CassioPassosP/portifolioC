@@ -1,0 +1,35 @@
+body.light {
+  --bg: #eef4f3;
+  --surface: #ffffff;
+  --surface-raised: #e2eceb;
+  --line: #c5d5d5;
+  --muted: #53656a;
+  --text: #102127;
+}
+
+body.light::before {
+  background-image:
+    linear-gradient(rgba(16, 33, 39, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 33, 39, 0.045) 1px, transparent 1px);
+}
+
+body.light .toolbar-main {
+  background: rgba(238, 244, 243, 0.88);
+}
+
+body.light .projects-list {
+  background: #e5eeee;
+}
+
+body.light .tags-project span {
+  background: #f4f9f8;
+}
+
+body.light .career-tags span {
+  background: #f4f9f8;
+}
+
+body.light .tools-used-div img,
+body.light .SocialMediaImg {
+  filter: invert(1) brightness(0.35);
+}
