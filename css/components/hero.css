@@ -1,0 +1,142 @@
+.container-me {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr);
+  gap: 4rem;
+  max-width: 1240px;
+  min-height: 620px;
+  margin: 0 auto;
+  padding: 7rem 6vw 5rem;
+}
+
+.welcome-text-and-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: center;
+}
+
+#welcome-title {
+  max-width: 720px;
+  color: var(--text);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+#welcome-title::after {
+  display: block;
+  width: 84px;
+  height: 5px;
+  margin-top: 1.5rem;
+  background: var(--cyan);
+  content: "";
+}
+
+#welcome-text {
+  max-width: 650px;
+  margin-top: 0;
+  color: var(--muted);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.4;
+}
+
+#tools-title {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#tools-title::before {
+  color: var(--orange);
+  content: "[ automation.ready ] ";
+}
+
+.tools-used-div {
+  margin-top: 0;
+}
+
+#tools-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tools-used-div img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+#author-img {
+  position: relative;
+  display: grid;
+  align-self: center;
+  place-items: center;
+  width: 100%;
+  padding: 3.5rem 1.5rem 1.5rem;
+  min-height: clamp(430px, 40vw, 500px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(85, 230, 208, 0.1), transparent 55%),
+    var(--surface);
+  overflow: hidden;
+}
+
+#author-img::before {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  color: var(--cyan);
+  content: "STATUS / ONLINE";
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+#author-img::after {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 15px var(--cyan);
+  content: "";
+}
+
+#author-img img {
+  display: block;
+  width: min(390px, 100%);
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border: 2px solid var(--cyan);
+  border-radius: 14px;
+  box-shadow:
+    0 0 0 6px rgba(85, 230, 208, 0.08),
+    0 0 28px rgba(85, 230, 208, 0.2);
+  filter: saturate(0.8) contrast(1.05);
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#author-img:hover img {
+  filter: saturate(1) contrast(1.08);
+  transform: scale(1.02);
+  box-shadow:
+    0 0 0 6px rgba(85, 230, 208, 0.12),
+    0 0 38px rgba(85, 230, 208, 0.35);
+}

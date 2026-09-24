@@ -1,0 +1,12 @@
+.footer-toolbar {
+  padding: 1.5rem 6vw;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#text-footer {
+  margin: 0;
+}
