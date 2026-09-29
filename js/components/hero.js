@@ -9,7 +9,7 @@ export function renderHero() {
   return `<section class="container-me" aria-labelledby="welcome-title">
     <div class="welcome-text-and-tools">
       <h1 id="welcome-title">Seja bem vindo!</h1>
-      <p id="welcome-text">Ola me chamo <span id="namePage">Cassio Passos</span>, Desenvolvedor Full Stack em evolução.</p>
+      <p id="welcome-text">Olá! Me chamo <span id="namePage">Cassio Passos</span>, Desenvolvedor Full Stack em evolução.</p>
       <h2 id="tools-title">Ferramentas que utilizo:</h2>
       <div class="tools-used-div"><ul id="tools-icons">${icons}</ul></div>
     </div>
